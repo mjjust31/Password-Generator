@@ -69,8 +69,6 @@ function writePassword() {
     "Please enter a passworld requirement: Select between 8 and 128"
   );
 
-  var lengthRequirement = parseInt(userLength);
-
   while (userLength < 8 || userLength > 128) {
     alert(
       "Please enter a passworld requirement: Select between 8 and 128. Try again."
@@ -79,6 +77,8 @@ function writePassword() {
       "Please enter a passworld requirement: Select between 8 and 128"
     );
   }
+
+  var lengthRequirement = parseInt(userLength);
 
   alert("Choose at least one of the four character sets for your password.");
 
@@ -96,12 +96,26 @@ function writePassword() {
   );
 
   if (!lowerLetters && !upperLetters && !numberSet && !specChar) {
+    //
     alert(
       "Please select at least one set of either lowercase letters, uppercase letters, numbers, or special characters to make up your password. Please start over."
     );
     writePassword();
   }
 
+  if (lowerLetters) {
+    userPicked = userPicked.concat(lowerLetters);
+  }
+  if (upperLetter) {
+    userPicked = userPicked.concat(upperLetter);
+  }
+  if (numberSet) {
+    userPicked = userPicked.concat(lowerLetters);
+  }
+  if (specChar) {
+    userPicked = userPicked.concat(lowerLetters);
+  }
+console.log(userPicked);
 
 
   var password = generatePassword();
