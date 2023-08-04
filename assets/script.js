@@ -100,22 +100,30 @@ function writePassword() {
     alert(
       "Please select at least one set of either lowercase letters, uppercase letters, numbers, or special characters to make up your password. Please start over."
     );
-    writePassword();
+    writePassword();//send back to the start of length and character types.
   }
 
-  if (lowerLetters) {
+  if (lowerLetters) {//if this is true, make a new array.
     userPicked = userPicked.concat(lowerLetters);
   }
-  if (upperLetter) {
-    userPicked = userPicked.concat(upperLetter);
+  if (upperLetters) {
+    userPicked = userPicked.concat(upperLetters);
   }
   if (numberSet) {
-    userPicked = userPicked.concat(lowerLetters);
+    userPicked = userPicked.concat(numberSet);
   }
   if (specChar) {
-    userPicked = userPicked.concat(lowerLetters);
+    userPicked = userPicked.concat(specChar);
   }
-console.log(userPicked);
+  console.log(userPicked);//this came back as an array of booleans. 
+
+//now we need to generate the password based on the user picked length and the user picked character types. We also need to make it random.
+//do a for loop with random for the function to return to the password.
+
+function generatePassword(){
+
+
+}
 
 
   var password = generatePassword();
