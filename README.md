@@ -42,3 +42,7 @@ Pseudo-Code
 8. The password that should then be returned and generated on the page.
 
 1. The while Loop https://www.w3schools.com/js/js_loop_while.asp
+2. Reviewed the difference bewteen Number() and parseInt(). https://www.geeksforgeeks.org/what-is-the-difference-between-parseint-and-number/
+        a. the better option (I think) for this particular exercise would be to use the parseInt. The number could return any decimals and we are not looking for that in this case. 
+3. How to use math.floor(math.random) to generate random items from an array. https://www.w3resource.com/javascript-exercises/javascript-array-exercise-35.php
+        a. array(math.floor(math.random) * the length of the array). In this case, it is the user's picked length becasue the for loop will create the password based on the original input. 
