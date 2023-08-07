@@ -1,6 +1,9 @@
 # Password Generator Starter Code
 
 
+Live link: https://mjjust31.github.io/Password-Generator/
+
+
 
 User Story
 AS AN employee with access to sensitive data
