@@ -46,3 +46,4 @@ Pseudo-Code
         a. the better option (I think) for this particular exercise would be to use the parseInt. The number could return any decimals and we are not looking for that in this case. 
 3. How to use math.floor(math.random) to generate random items from an array. https://www.w3resource.com/javascript-exercises/javascript-array-exercise-35.php
         a. array(math.floor(math.random) * the length of the array). In this case, it is the user's picked length becasue the for loop will create the password based on the original input. 
+4. Review of operators for += https://www.w3schools.com/js/js_operators.asp
