@@ -2,65 +2,11 @@
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-
-var lowerLetReq = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
-var upperLetReq = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
-var numberSetReq = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-var specCharReq = ["!", "#", "$", "%", "^", "&", "*", "?", "+", "="];
+var alphabetNumericCharacters = 'abcdefghijklmnopqrstuvwxyz';
+var lowerLetReq = ["abcdefghijklmnopqrstuvwxyz"];
+var upperLetReq = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var numberSetReq = ["0123456789"];
+var specCharReq = ["!@#$%^&*()_-+=|{}[];:?/.>,<"];
 var userPicked = [""]; //global scope variables.
 
 // Write password to the #password input
@@ -106,18 +52,21 @@ function writePassword() {
   }
 
   if (lowerLetters) {
-    //if this is true, make a new array.
-    userPicked = userPicked.concat(lowerLetReq);
-  }
-  if (upperLetters) {
-    userPicked = userPicked.concat(upperLetReq);
-  }
-  if (numberSet) {
-    userPicked = userPicked.concat(numberSetReq);
-  }
-  if (specChar) {
-    userPicked = userPicked.concat(specCharReq);
-  }
+    userPicked += lowerLetReq;
+    }
+    
+    if (upperLetters) {
+    userPicked += upperLetReq;
+    }
+    
+    if (numberSet) {
+    userPicked += numberSetReq;
+    }
+    
+    if (specChar) {
+    userPicked += specCharReq;
+    }
+    
   // console.log(userPicked); //this came back as an array of booleans.
 
   //now we need to generate the password based on the user picked length and the user picked character types. We also need to make it random.
